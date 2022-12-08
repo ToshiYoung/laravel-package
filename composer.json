@@ -1,0 +1,45 @@
+{
+    "name": "toshiyoung/laravel-package",
+    "description": "Laravel sample package",
+    "type": "package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nikita Burakov",
+            "email": "i@toshiyoung.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ToshiYoung\\SamplePackage\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ToshiYoung\\SamplePackage\\Test\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.0",
+        "illuminate/database": "^9.0",
+        "illuminate/support": "^9.0",
+        "illuminate/console": "^9.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "orchestra/testbench": "^7.15"
+    },
+    "scripts": {
+        "test": [
+            "vendor/bin/phpunit"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "\\ToshiYoung\\SamplePackage\\ServiceProvider"
+            ]
+        }
+    }
+}
